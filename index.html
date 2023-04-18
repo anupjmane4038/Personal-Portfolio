@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anup Jalindar Mane</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1e0172fed1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Port<span style="color: #ff004f;">folio</span></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="Anup CV.pdf">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+   <section class="banner">
+    <div class="textBx">
+        <h2>
+            Hello, I'm<br><span>Anup Jalindar Mane</span>
+        </h2><br>
+        <h3>
+            I'm a <span style="color: #ff004f;">Computer Engineering Student</span>
+        </h3>        
+
+    </div>
+   </section>
+   <!-- -------------about------------ -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title" align="center">About Me</h1>
+                <p>I'm a Computer Engineering student pursuing BTech from Veermata Jijabai Technological Institute, Mumbai. I'm interested in logic building and solving aptitude based problems.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>
+                            <span>Programming Languages</span><br>
+                            C/C++, Python Basics
+                        </li>
+                        <li>
+                            <span>Web Development</span><br>
+                            HTML, CSS, Javascript, Node.js
+                        </li>
+                        <li>
+                            <span>Database</span><br>
+                            MongoDB
+                        </li>
+                        <li>
+                            <span>Platform</span><br>
+                            Windows
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>
+                            <span>2019</span><br>
+                            10th from Laxmanrao Kirloskar Vidyamandir, Palus
+                        </li>
+                        <li>
+                            <span>2021</span><br>
+                            12th from Kota Junior College of Science, Karad
+                        </li>
+                        <li>
+                            <span>2021-Present</span><br>
+                            Pursuing Btech in Computer Engineering from Veermata Jijabai Technological Institute, Mumbai
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li>
+                            <span>Mess Management System</span><br>
+                            <a href="https://github.com/anupjmane4038/Mess-Management.git" style="color:#ababab;text-decoration: none;">Web Development Project</a>
+                        </li>
+                        <li>
+                            <span>Virtual Mouse</span><br>
+                            Python Programming Course Project
+                        </li>
+                        <li>
+                            <span>Vehicle Accident Alert System</span><br>
+                            Digital Logic & Design Course Project
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!-- -----------contact------------- -->
+   <footer id="contact">
+        <p>Contact Me</p>
+        <div class="r">
+            <div class="col1">
+        <h6 align="center"><i class="fa-solid fa-envelope"></i> anupjmane4038@gmail.com</h6>
+        </div>
+        <div class="col2">
+            <h5 align="center"><i class="fa-sharp fa-regular fa-location-dot"></i> Palus, Maharashtra - 416310</h5>
+            </div>
+        <div class="col3">
+        <h5 align="center"><i class="fa-solid fa-phone"></i> +91-9579954567</h5>
+        </div>
+    </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/anup-mane-35a84a231/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/anup_mane_4038/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/anupjmane4038"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p class="end">CopyRight By Anup Jalindar Mane</p>
+   </footer>
+   <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+   </script>
+   <script type="text/Javascript">
+    window.addEventListener('scroll', function(){
+        var header= document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY>0);
+    });
+    function toggleMenu() {
+        var menuToggle=document.querySelector('.toggle');
+        var menu=document.querySelector('.menu');
+        menuToggle.classList.toggle('active')
+        menu.classList.toggle('active')
+    }
+   </script>
+</body>
+</html>
