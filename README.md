@@ -27,7 +27,7 @@ Here is my personal portfolio which consists of my education, projects, skills, 
 
 
 ## 🤖 Technology Stack
-<h3>HTML, CSS & Javascript</h3>
+<hp>HTML, CSS & Javascript</p>
 
 
 
